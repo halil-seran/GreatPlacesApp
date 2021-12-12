@@ -32,7 +32,10 @@
     "expo-image-picker": "~11.0.3",
     "expo-permissions": "~13.0.3",
     "expo-file-system": "~13.0.3",
-    "expo-camera": "~12.0.3"
+    "expo-camera": "~12.0.3",
+    "expo-sqlite": "~10.0.3",
+    "expo-location": "~13.0.4",
+    "react-native-maps": "0.28.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9"

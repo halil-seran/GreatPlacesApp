@@ -5,9 +5,18 @@ import { createStore, combineReducers, applyMiddleware } from 'redux';
 
 import PlacesNavigator from './navigation/PlacesNavigator';
 import placesReducer from './store/places-reducer';
+import { init } from './helpers/db';
 
 import { StatusBar } from 'expo-status-bar';
 
+init()
+  .then(() => {
+    console.log('initialized database');
+  })
+  .catch(err => {
+    console.log('initializing db is failed')
+    console.log(err);
+  });
 
 const rootReducer = combineReducers({
   places: placesReducer
