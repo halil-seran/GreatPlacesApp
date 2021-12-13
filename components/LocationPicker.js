@@ -13,7 +13,7 @@ const LocationPicker = props => {
 
     const mapPickedLocation = props.navigation.getParam('pickedLocation');
 
-    const {onLocationPicked} = props;
+    const { onLocationPicked } = props;
 
     useEffect(() => {
         if (mapPickedLocation) {
@@ -72,16 +72,20 @@ const LocationPicker = props => {
                     : <Text>No location chosen yet!</Text>}
             </MapPreview>
             <View style={styles.actions} >
-                <Button
-                    title="Get User Location"
-                    color={Colors.primary}
-                    onPress={getLocationHandler}
-                />
-                <Button
-                    title="Pick on Map"
-                    color={Colors.primary}
-                    onPress={pickOnMapHandler}
-                />
+                <View style={styles.button}>
+                    <Button
+                        title="Get User Location"
+                        color={Colors.primary}
+                        onPress={getLocationHandler}
+                    />
+                </View>
+                <View style={styles.button}>
+                    <Button
+                        title="Pick on Map"
+                        color={Colors.primary}
+                        onPress={pickOnMapHandler}
+                    />
+                </View>
             </View>
         </View>
     );
@@ -96,13 +100,19 @@ const styles = StyleSheet.create({
         width: '100%',
         height: 150,
         borderColor: '#ccc',
-        borderWidth: 2
+        borderWidth: 3,
+        width: 350,
+        height: 218,
+        borderRadius: 20
 
     },
     actions: {
         flexDirection: 'row',
-        justifyContent: 'space-around',
+        justifyContent: 'space-evenly',
         width: '100%'
+    },
+    button:{
+        width:130
     }
 });
 

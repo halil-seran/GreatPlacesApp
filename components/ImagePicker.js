@@ -42,11 +42,13 @@ const ImgPicker = props => {
                 {!pickedImage ? (<Text>No image picked yet.</Text>)
                     : (<Image style={styles.image} source={{ uri: pickedImage }} />)}
             </View>
-            <Button
-                title="Take Image"
-                color={Colors.primary}
-                onPress={takeImageHandler}
-            />
+            <View style={styles.button}>
+                <Button
+                    title="Take Image"
+                    color={Colors.primary}
+                    onPress={takeImageHandler}
+                />
+            </View>
         </View>
     );
 };
@@ -54,20 +56,25 @@ const ImgPicker = props => {
 const styles = StyleSheet.create({
     imagePicker: {
         alignItems: 'center',
-        marginBottom: 14
+        marginBottom: 15
     },
     imagePreview: {
-        width: '100%',
-        height: 222,
+        width: 350,
+        height: 218,
         marginBottom: 10,
         justifyContent: 'center',
         alignItems: 'center',
         borderColor: '#ccc',
-        borderWidth: 2
+        borderWidth: 3,
+        borderRadius: 20
     },
     image: {
         width: '100%',
-        height: '100%'
+        height: '100%',
+        borderRadius: 17
+    },
+    button:{
+        width:218
     }
 
 });

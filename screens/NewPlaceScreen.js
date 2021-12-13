@@ -46,7 +46,9 @@ const NewPlaceScreen = props => {
                     navigation={props.navigation}
                     onLocationPicked={locationPickedHandler}
                 />
-                <Button title="Save Place" color={Colors.primary} onPress={savePlaceHandler} />
+                <View style={styles.button}>
+                    <Button title="Save Place" color={Colors.primary} onPress={savePlaceHandler} />
+                </View>
             </View>
         </ScrollView>
     );
@@ -62,14 +64,17 @@ const styles = StyleSheet.create({
     },
     label: {
         fontSize: 19,
-        marginBottom: 14
+        marginBottom: 1
     },
     textInput: {
         borderBottomColor: '#ccc',
         borderBottomWidth: 4,
-        marginBottom: 16,
-        paddingVertical: 1,
-        paddingHorizontal: 3
+        marginBottom: 14,
+        paddingVertical: 2,
+        paddingHorizontal: 2
+    },
+    button: {
+        marginTop:5
     }
 });
 

@@ -30,7 +30,9 @@ const styles = StyleSheet.create({
     },
     mapImage: {
         width: '100%',
-        height: '100%'
+        height: '100%',
+        borderBottomLeftRadius: 10,
+        borderBottomRightRadius: 10
     }
 });
 

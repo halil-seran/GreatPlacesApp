@@ -24,7 +24,7 @@ const PlacesListScreen = props => {
       (<PlaceItem
         image={itemData.item.imageUri}  //referring to place.js /modals
         title={itemData.item.title}
-        address={null}
+        address={itemData.item.address}
         onSelect={() => {
           props.navigation.navigate('PlaceDetail', {
             placeTitle: itemData.item.title,

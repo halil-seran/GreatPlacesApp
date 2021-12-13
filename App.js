@@ -28,7 +28,7 @@ export default function App() {
   return (
     <Provider store={store}>
       <PlacesNavigator />
-      <StatusBar style='light' /*hidden={true}*/ />
+      <StatusBar style='light' hidden={true} />
     </Provider>
   );
 }
